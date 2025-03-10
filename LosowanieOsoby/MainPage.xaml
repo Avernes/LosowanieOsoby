@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="LosowanieOsoby.MainPage">
+
+    <VerticalStackLayout Padding="20">
+        <Label Text="System losowania osoby do odpowiedzi"
+               FontSize="20"
+               HorizontalOptions="Center" />
+
+        <Entry x:Name="entryClassName" Placeholder="Nazwa klasy" />
+        <Entry x:Name="entryStudentName" Placeholder="Imię i nazwisko ucznia" />
+
+        <Button Text="Dodaj ucznia" Clicked="OnAddStudentClicked" />
+        <Button Text="Zapisz listę do pliku" Clicked="OnSaveListClicked" />
+        <Button Text="Wczytaj listę klasy" Clicked="OnLoadListClicked" />
+        <Button Text="Losuj osobę" Clicked="OnDrawStudentClicked" />
+
+        <Label x:Name="labelSelectedStudent" Text="Wylosowana osoba: -" FontSize="18" HorizontalOptions="Center"/>
+        <ListView x:Name="listViewStudents" />
+
+        <Button Text="Usuń zaznaczonego ucznia" Clicked="OnRemoveStudentClicked"/>
+    </VerticalStackLayout>
+</ContentPage>
